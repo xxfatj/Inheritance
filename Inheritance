@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        
+              int n,k;
+       Scanner in = new Scanner(System.in);
+       n = in.nextInt();
+       k = in.nextInt();
+      
+       System.out.print(eliminate(n,k));
+      
+       in.close();
+   }
+  
+   public static int eliminate(int n, int k) {
+       if (n == 1) return 1;
+       else
+            return (eliminate(n - 1, k) + k-1) % n + 1;
+   }
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
